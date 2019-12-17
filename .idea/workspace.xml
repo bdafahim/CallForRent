@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c76f4acd-2d56-47f2-950f-bcdbd5e3cc32" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallForRent/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CallForRent/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,8 @@
       <workItem from="1576305785550" duration="5337000" />
       <workItem from="1576347537442" duration="455000" />
       <workItem from="1576390843097" duration="1307000" />
-      <workItem from="1576392188670" duration="20074000" />
+      <workItem from="1576392188670" duration="20562000" />
+      <workItem from="1576597444957" duration="1054000" />
     </task>
     <servers />
   </component>
@@ -148,9 +148,9 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1576489186598" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1576392190511">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1576597455876">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576392190511" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576597455876" />
   </component>
 </project>
