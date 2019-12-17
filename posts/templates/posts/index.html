@@ -8,7 +8,8 @@
 
     <h1>{{ title }} is working</h1>
     {% for object in object_list %}
-        {{ object.title }}<br/>
+        {% comment %}/posts/{{ object.id }}{% endcomment %}
+        <a href='{{ object.get_absolute_url }}'>{{ object.title }}</a><br/>
         {{ object.content }}<br/>
         {{ object.time_stamp }}<br/>
         {{ object.id }}<br/>
