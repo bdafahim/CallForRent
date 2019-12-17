@@ -1,11 +1,18 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 
 def posts_create(request):
     return HttpResponse("<h1>Create</h1>")
 def posts_detail(request):
-    return HttpResponse("<h1>detail</h1>")
+    #instance = Post.objects.get(id=5)
+    instance = get_object_or_404(Post, id=2)
+
+    context = {
+        "title": instance.title,
+        "instance": instance
+    }
+    return render(request, 'posts/post_detail.html', context)
 def posts_list(request):
     queryset = Post.objects.all()
     context = {
