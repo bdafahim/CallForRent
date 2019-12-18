@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>form</title>
-</head>
-<body>
+{% extends 'posts/post_base.html' %}
+{% load static %}
 
+{% block content %}
     <h1>Form</h1>
     <form method='POST' action="">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Create Post"/>
     </form>
-
-</body>
-</html>
+{% endblock content %}
