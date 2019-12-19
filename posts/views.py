@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
+from django.db.models import Q
 from .forms import PostForm
 
 def posts_create(request):
@@ -29,6 +30,12 @@ def posts_detail(request,id=None):
     return render(request, 'posts/post_detail.html', context)
 def posts_list(request):
     queryset = Post.objects.all() #.order_by("-time_stamp")
+    query = request.GET.get("q")
+    if query:
+        queryset = queryset.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query)
+        ).distinct()
     context = {
         "object_list": queryset,
         "title": "List",
