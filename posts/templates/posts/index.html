@@ -10,9 +10,11 @@
         <div class="row">
       <div class="col-sm-12">
         <div class="thumbnail">
-{#          <img src="..." alt="...">#}
+            {% if object.image %}
+                <img src="{{ object.image.url }}" class="img-responsive"/>
+            {% endif %}
           <div class="caption">
-            <h3><a href='{{ object.get_absolute_url }}'>{{ object.title }}</a> <small>{{ object.time_stamp | timesince }}</small>l</h3>
+            <h3><a href='{{ object.get_absolute_url }}'>{{ object.title }}</a> <small>{{ object.time_stamp | timesince }}</small></h3>
             <p>{{ object.content | linebreaks | truncatechars:120 }}</p>
             <p><a href="{{ object.get_absolute_url }}" class="btn btn-primary" role="button">View</a> </p>
           </div>
