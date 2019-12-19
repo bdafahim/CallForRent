@@ -5,10 +5,12 @@
 
 {% block content %}
 
-    <h1>{{ title }} is working</h1>
-    {{ instance.title }}<br/>
-    {{ instance.content }}<br/>
-    {{ instance.time_stamp }}<br/>
-    {{ instance.id }}<br/>
+    <div class="col-sm-6 col-sm-offset-3">
+
+    <h1>{{ instance.title }} <small>{{ instance.time_stamp | timesince }}</small></h1>
+    {{ instance.content | linebreaks }}<br/>
+
+    </div>
 
 {% endblock content %}
+
