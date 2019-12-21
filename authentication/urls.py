@@ -5,4 +5,5 @@ app_name = 'authentication'
 
 urlpatterns = [
  path('signin/', views.SignInView, name='signin'),
+ path('signout/', views.LogoutView, name='signout'),
 ]

@@ -18,3 +18,9 @@ def SignInView(request):
 
     else:
         return render(request, 'authentication/login.html')
+
+
+def LogoutView(request):
+    logout(request)
+    messages.success(request, "Succesfully logged out")
+    return redirect('home:home')
