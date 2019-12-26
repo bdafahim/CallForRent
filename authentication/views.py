@@ -34,7 +34,7 @@ def SignUpView(request):
         if form.is_valid():
             form.save()
             email = form.cleaned_data['email']
-            password = form.cleaned_data['password1']
+            password = form.cleaned_data['password']
             user = authenticate(request, email=email, password=password)
             login(request, user)
             messages.success(request, "Succesfully registered")

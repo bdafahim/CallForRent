@@ -7,6 +7,7 @@ class SignupForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput(attrs=
                                                           {'placeholder': 'Password (min 6 length)', 'class':
                                                               'form-control', 'minLength': '6', 'maxLength': '12'}))
+    email = forms.EmailField()
 
 
     class Meta:

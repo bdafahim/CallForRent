@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c76f4acd-2d56-47f2-950f-bcdbd5e3cc32" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/templates/authentication/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/templates/authentication/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +128,7 @@
       <workItem from="1576862207909" duration="1760000" />
       <workItem from="1576923485588" duration="10125000" />
       <workItem from="1577030908668" duration="639000" />
-      <workItem from="1577372131646" duration="9187000" />
+      <workItem from="1577372131646" duration="10624000" />
     </task>
     <servers />
   </component>
