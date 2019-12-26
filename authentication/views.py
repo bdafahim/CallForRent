@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from .forms import SignupForm
 
 def SignInView(request):
     if request.method == 'POST':
@@ -29,7 +30,7 @@ def LogoutView(request):
 
 def SignUpView(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignupForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             form.save()
             email = form.cleaned_data['email']
@@ -39,7 +40,8 @@ def SignUpView(request):
             messages.success(request, "Succesfully registered")
             return redirect('posts:list')
     else:
-        form = UserCreationForm()
+        form = SignupForm()
+
     context = {'form': form}
     return render(request, 'authentication/register.html', context)
 
