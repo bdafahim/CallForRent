@@ -4,6 +4,10 @@
 {% block content %}
 
 {#    {{ block.super }}#}
+
+    {% if user.is_authenticated %}
+        <p>Username: {{ user.email }}</p>
+    {% endif %}
     <h1>{{ title }}</h1>
     <form method="get" action="">
     <input type="text" name="q" placeholder="Search Posts" value="{{ request.GET.q }}">

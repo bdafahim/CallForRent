@@ -1,9 +1,11 @@
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from django.db.models import Q
 from .forms import PostForm
+from authentication.models import User
 
 def posts_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
@@ -29,6 +31,7 @@ def posts_detail(request,id=None):
     }
     return render(request, 'posts/post_detail.html', context)
 def posts_list(request):
+    user = request.user
     queryset = Post.objects.all() #.order_by("-time_stamp")
     query = request.GET.get("q")
     if query:
@@ -39,6 +42,7 @@ def posts_list(request):
     context = {
         "object_list": queryset,
         "title": "List",
+        'user': user,
     }
     return render(request, 'posts/index.html', context)
 def posts_update(request, id=None):
