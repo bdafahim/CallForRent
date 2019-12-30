@@ -38,12 +38,14 @@ def SignUpView(request):
             if User.objects.filter(email=email).exists():
                 form.add_error("email", 'Email Address Taken')
             else:
-                user = User.objects.create_user(email=email, password=password)
-                user = form.save(commit=False)
-                user.is_active = False
-                user.save()
-                user = authenticate(request, email=email, password=password)
-                login(request, user)
+                current_user = User.objects.create_user(email=email, password=password)
+                user_detail = form.save(commit=False)
+                user_detail.user = current_user
+                #user_detail.is_active = False
+                current_user.save()
+                user_detail.save()
+                # user = authenticate(request, email=email, password=password)
+                login(request, current_user)
                 messages.success(request, "Succesfully registered")
                 return redirect('posts:list')
     else:
@@ -51,7 +53,6 @@ def SignUpView(request):
 
     context = {'form': form}
     return render(request, 'authentication/register.html', context)
-
 
 
 

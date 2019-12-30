@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
@@ -7,6 +8,7 @@ from django.db.models import Q
 from .forms import PostForm
 from authentication.models import User
 
+@login_required(login_url='/signin/')
 def posts_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
@@ -21,6 +23,8 @@ def posts_create(request):
         "form": form,
     }
     return render(request, 'posts/post_form.html', context)
+
+@login_required(login_url='/signin/')
 def posts_detail(request,id=None):
     #instance = Post.objects.get(id=5)
     instance = get_object_or_404(Post, id=id)
@@ -30,6 +34,7 @@ def posts_detail(request,id=None):
         "instance": instance,
     }
     return render(request, 'posts/post_detail.html', context)
+@login_required(login_url='/signin/')
 def posts_list(request):
     user = request.user
     queryset = Post.objects.all() #.order_by("-time_stamp")
@@ -45,6 +50,7 @@ def posts_list(request):
         'user': user,
     }
     return render(request, 'posts/index.html', context)
+@login_required(login_url='/signin/')
 def posts_update(request, id=None):
     instance = get_object_or_404(Post, id=id)
     form = PostForm(request.POST or None, request.FILES or None, instance=instance)
@@ -60,6 +66,7 @@ def posts_update(request, id=None):
         "form": form,
     }
     return render(request, 'posts/post_form.html', context)
+@login_required(login_url='/signin/')
 def posts_delete(request, id=None):
     instance = get_object_or_404(Post, id=id)
     instance.delete()
