@@ -4,7 +4,6 @@
     <list default="true" id="c76f4acd-2d56-47f2-950f-bcdbd5e3cc32" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,6 +67,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="CallForRent" type="Python.DjangoServer" factoryName="Django server">
@@ -130,7 +134,7 @@
       <workItem from="1577030908668" duration="639000" />
       <workItem from="1577372131646" duration="11257000" />
       <workItem from="1577545116080" duration="4928000" />
-      <workItem from="1577700239589" duration="606000" />
+      <workItem from="1577700239589" duration="4432000" />
     </task>
     <servers />
   </component>
